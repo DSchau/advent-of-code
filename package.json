@@ -1,0 +1,21 @@
+{
+  "name": "advent-of-code",
+  "version": "1.0.0",
+  "main": "n/a",
+  "author": "Dustin Schau <dustinschau@gmail.com> (https://dustinschau.com)",
+  "license": "MIT",
+  "scripts": {
+    "build": "npm run build:2017",
+    "build:2017": "tsc --project 2017/tsconfig.build.json",
+    "test": "npm run test:2017",
+    "test:2017": "jest --config 2017/jest.config.js --watch"
+  },
+  "devDependencies": {
+    "@types/jest": "~21.1.8",
+    "@types/node": "~8.0.53",
+    "jest": "~21.2.1",
+    "jest-preset-typescript": "~1.0.1",
+    "ts-jest": "~21.2.4",
+    "typescript": "~2.6.2"
+  }
+}
