@@ -13,7 +13,7 @@ module.exports = {
       return folders
         .map(folder => {
           const name = camelCase(folder.match(/(\d+-?)(.*)/).pop());
-          return `[${name}](./${folder}/index.${lang})`;
+          return `- [${name}](./${folder}/index.${lang})`;
         })
         .join('\n');
     }

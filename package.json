@@ -8,7 +8,8 @@
     "precommit": "lint-staged",
     "build": "npm run build:2017",
     "build:2017": "tsc --project 2017/tsconfig.build.json",
-    "markdown": "npm run markdown:2017",
+    "markdown": "npm run markdown:2017 & npm run markdown:base",
+    "markdown:base": "md-magic --path README.md",
     "markdown:2017": "md-magic --path 2017/README.md",
     "test": "npm run test:2017",
     "test:2017": "jest --config 2017/jest.config.js --watch"
