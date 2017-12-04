@@ -28,7 +28,6 @@
   "lint-staged": {
     "**/*.ts": [
       "prettier --write --parser typescript",
-      "npm run markdown:2017"
       "git add"
     ]
   }
