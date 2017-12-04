@@ -12,7 +12,7 @@
     "markdown:base": "md-magic --path README.md",
     "markdown:2017": "md-magic --path 2017/README.md",
     "test": "npm run test:2017",
-    "test:2017": "jest --config 2017/jest.config.js --watch"
+    "test:2017": "jest --config 2017/jest.config.js"
   },
   "devDependencies": {
     "@types/jest": "~21.1.8",
