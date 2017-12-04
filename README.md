@@ -1,6 +1,13 @@
 # Advent of Code
 
-[![Build Status](https://travis-ci.org/DSchau/advent-of-code.svg?branch=master)](https://travis-ci.org/DSchau/advent-of-code)
+<p align="center">
+  <a href="https://travis-ci.org/DSchau/advent-of-code">
+    <img alt="Travis" src="https://travis-ci.org/DSchau/advent-of-code.svg?branch=master">
+  </a>
+  <a href="#badge">
+    <img alt="code style: prettier" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg">
+  </a>
+</p>
 
 Solutions to advent of code (starting in 2017), written in Typescript and unit tested in Jest.
 
