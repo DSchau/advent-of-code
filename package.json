@@ -5,7 +5,6 @@
   "author": "Dustin Schau <dustinschau@gmail.com> (https://dustinschau.com)",
   "license": "MIT",
   "scripts": {
-    "precommit": "lint-staged",
     "build": "npm run build:2017",
     "build:2017": "tsc --project 2017/tsconfig.build.json",
     "markdown": "npm run markdown:2017 & npm run markdown:base",
@@ -25,5 +24,11 @@
     "prettier": "~1.8.2",
     "ts-jest": "~21.2.4",
     "typescript": "~2.6.2"
+  },
+  "lint-staged": {
+    "**/*.ts": [
+      "prettier --write --parser typescript",
+      "git add"
+    ]
   }
 }

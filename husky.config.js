@@ -1,6 +1,5 @@
 module.exports = {
-  '**/*.ts': [
-    'prettier --write --parser typescript',
-    'git add'
-  ]
+  hooks: {
+    'pre-commit': 'lint-staged'
+  }
 };

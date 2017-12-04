@@ -6,6 +6,7 @@
 - [Inverse Captcha](./01-inverse-captcha/index.ts)
 - [Corruption Checksum](./02-corruption-checksum/index.ts)
 - [Spiral Memory](./03-spiral-memory/index.ts)
+- [High Entropy Passphrases](./04-high-entropy-passphrases/index.ts)
 <!-- AUTO-GENERATED-CONTENT:END (SOLUTIONS) -->
 
 [advent-of-code]: http://adventofcode.com/2017
