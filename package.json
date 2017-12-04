@@ -5,17 +5,31 @@
   "author": "Dustin Schau <dustinschau@gmail.com> (https://dustinschau.com)",
   "license": "MIT",
   "scripts": {
+    "precommit": "lint-staged",
     "build": "npm run build:2017",
     "build:2017": "tsc --project 2017/tsconfig.build.json",
+    "markdown": "npm run markdown:2017",
+    "markdown:2017": "md-magic --path 2017/README.md",
     "test": "npm run test:2017",
     "test:2017": "jest --config 2017/jest.config.js --watch"
   },
   "devDependencies": {
     "@types/jest": "~21.1.8",
     "@types/node": "~8.0.53",
+    "husky": "~0.14.3",
     "jest": "~21.2.1",
     "jest-preset-typescript": "~1.0.1",
+    "lint-staged": "~6.0.0",
+    "markdown-magic": "~0.1.19",
+    "prettier": "~1.8.2",
     "ts-jest": "~21.2.4",
     "typescript": "~2.6.2"
+  },
+  "lint-staged": {
+    "**/*.ts": [
+      "prettier --write --parser typescript",
+      "npm run markdown:2017"
+      "git add"
+    ]
   }
 }
