@@ -5,7 +5,7 @@ const camelCase = str => str.replace(/(-\w|^\w)/g, (match, group) => group.toUpp
 
 module.exports = {
   transforms: {
-    SOLUTIONS(content, { path: dir }) {
+    SOLUTIONS(content, { lang = 'ts', path: dir }) {
       const base = path.join(process.cwd(), dir);
       const folders = fs.readdirSync(base)
         .filter(fileOrFolder => fs.statSync(path.join(base, fileOrFolder)).isDirectory());
@@ -13,7 +13,7 @@ module.exports = {
       return folders
         .map(folder => {
           const name = camelCase(folder.match(/(\d+-?)(.*)/).pop());
-          return `[${name}](./${dir}/${folder}/index.ts)`;
+          return `[${name}](./${folder}/index.${lang})`;
         })
         .join('\n');
     }
