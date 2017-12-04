@@ -13,9 +13,9 @@ Solutions to advent of code (starting in 2017), written in Typescript and unit t
 
 ## [2017](./2017)
 
-<!-- AUTO-GENERATED-CONTENT:START (SOLUTIONS:path=2017) -->
-- [Inverse Captcha](./01-inverse-captcha/index.ts)
-- [Corruption Checksum](./02-corruption-checksum/index.ts)
-- [Spiral Memory](./03-spiral-memory/index.ts)
-- [High Entropy Passphrases](./04-high-entropy-passphrases/index.ts)
+<!-- AUTO-GENERATED-CONTENT:START (SOLUTIONS:path=2017&root=.) -->
+- [Inverse Captcha](./2017/01-inverse-captcha/index.ts)
+- [Corruption Checksum](./2017/02-corruption-checksum/index.ts)
+- [Spiral Memory](./2017/03-spiral-memory/index.ts)
+- [High Entropy Passphrases](./2017/04-high-entropy-passphrases/index.ts)
 <!-- AUTO-GENERATED-CONTENT:END (SOLUTIONS) -->
