@@ -1,6 +1,8 @@
 # Advent of Code
 
-My solutions to advent of code (starting in 2017), written in Typescript and unit tested in Jest.
+[![Build Status](https://travis-ci.org/DSchau/advent-of-code.svg?branch=master)](https://travis-ci.org/DSchau/advent-of-code)
+
+Solutions to advent of code (starting in 2017), written in Typescript and unit tested in Jest.
 
 ## 2017
 
