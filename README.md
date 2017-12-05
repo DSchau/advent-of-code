@@ -18,4 +18,5 @@ Solutions to advent of code (starting in 2017), written in Typescript and unit t
 - [Corruption Checksum](./2017/02-corruption-checksum/index.ts) | [Day 2](https://adventofcode.com/2017/day/2)
 - [Spiral Memory](./2017/03-spiral-memory/index.ts) | [Day 3](https://adventofcode.com/2017/day/3)
 - [High Entropy Passphrases](./2017/04-high-entropy-passphrases/index.ts) | [Day 4](https://adventofcode.com/2017/day/4)
+- [A Maze Of Twisty Trampolines All Alike](./2017/2017-a-maze-of-twisty-trampolines-all-alike/index.ts) | [Day 2017](https://adventofcode.com/2017/day/2017)
 <!-- AUTO-GENERATED-CONTENT:END (SOLUTIONS) -->
