@@ -1,4 +1,4 @@
-export function getSortedWord(word: string) {
+export function getSortedWord(word: string): string | null {
   const sorted = word
     .split('')
     .sort()
@@ -14,18 +14,13 @@ export function passphraseValidator(
   withAnagramValidation: boolean = false
 ): boolean {
   let phraseMap = {};
-  let phrases = phrase.split(' ');
-  while (phrases.length) {
-    const latest = phrases.pop();
-    const words = [latest]
-      .concat(withAnagramValidation ? getSortedWord(latest) : [])
-      .filter(word => word && word.length > 0);
-    for (let word of words) {
-      if (phraseMap[word]) {
-        return false;
-      }
-      phraseMap[word] = true;
-    }
+  const phrases = phrase.split(' ')
+    .reduce((all, phrase) => {
+      return all.concat([phrase].concat(withAnagramValidation ? getSortedWord(phrase) || [] : []));
+    }, []);
+  const uniquePhrases = new Set(phrases);
+  if (uniquePhrases.size !== phrases.length) {
+    return false;
   }
   return true;
 }

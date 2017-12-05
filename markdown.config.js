@@ -12,8 +12,16 @@ module.exports = {
 
       return folders
         .map(folder => {
-          const name = camelCase(folder.match(/(\d+-?)(.*)/).pop());
-          return `- [${name}](./${root !== dir ? dir + '/' : ''}${folder}/index.${lang})`;
+          const [,day,name] = folder.match(/(\d+-?)(.*)/).map(part => {
+            if (/\d+/.test(part)) {
+              return parseFloat(part);
+            }
+            return camelCase(part);
+          });
+          return [
+            `- [${name}](./${root !== dir ? dir + '/' : ''}${folder}/index.${lang})`,
+            `[Day ${day}](https://adventofcode.com/2017/day/${day})`
+          ].join(' | ');
         })
         .join('\n');
     }

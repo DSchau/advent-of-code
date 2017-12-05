@@ -3,10 +3,10 @@
 ## Solutions
 
 <!-- AUTO-GENERATED-CONTENT:START (SOLUTIONS:path=2017) -->
-- [Inverse Captcha](./01-inverse-captcha/index.ts)
-- [Corruption Checksum](./02-corruption-checksum/index.ts)
-- [Spiral Memory](./03-spiral-memory/index.ts)
-- [High Entropy Passphrases](./04-high-entropy-passphrases/index.ts)
+- [Inverse Captcha](./01-inverse-captcha/index.ts) | [Day 1](https://adventofcode.com/2017/day/1)
+- [Corruption Checksum](./02-corruption-checksum/index.ts) | [Day 2](https://adventofcode.com/2017/day/2)
+- [Spiral Memory](./03-spiral-memory/index.ts) | [Day 3](https://adventofcode.com/2017/day/3)
+- [High Entropy Passphrases](./04-high-entropy-passphrases/index.ts) | [Day 4](https://adventofcode.com/2017/day/4)
 <!-- AUTO-GENERATED-CONTENT:END (SOLUTIONS) -->
 
 [advent-of-code]: http://adventofcode.com/2017

@@ -14,8 +14,8 @@ Solutions to advent of code (starting in 2017), written in Typescript and unit t
 ## [2017](./2017)
 
 <!-- AUTO-GENERATED-CONTENT:START (SOLUTIONS:path=2017&root=.) -->
-- [Inverse Captcha](./2017/01-inverse-captcha/index.ts)
-- [Corruption Checksum](./2017/02-corruption-checksum/index.ts)
-- [Spiral Memory](./2017/03-spiral-memory/index.ts)
-- [High Entropy Passphrases](./2017/04-high-entropy-passphrases/index.ts)
+- [Inverse Captcha](./2017/01-inverse-captcha/index.ts) | [Day 1](https://adventofcode.com/2017/day/1)
+- [Corruption Checksum](./2017/02-corruption-checksum/index.ts) | [Day 2](https://adventofcode.com/2017/day/2)
+- [Spiral Memory](./2017/03-spiral-memory/index.ts) | [Day 3](https://adventofcode.com/2017/day/3)
+- [High Entropy Passphrases](./2017/04-high-entropy-passphrases/index.ts) | [Day 4](https://adventofcode.com/2017/day/4)
 <!-- AUTO-GENERATED-CONTENT:END (SOLUTIONS) -->
