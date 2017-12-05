@@ -14,10 +14,11 @@ export function passphraseValidator(
   withAnagramValidation: boolean = false
 ): boolean {
   let phraseMap = {};
-  const phrases = phrase.split(' ')
-    .reduce((all, phrase) => {
-      return all.concat([phrase].concat(withAnagramValidation ? getSortedWord(phrase) || [] : []));
-    }, []);
+  const phrases = phrase.split(' ').reduce((all, phrase) => {
+    return all.concat(
+      [phrase].concat(withAnagramValidation ? getSortedWord(phrase) || [] : [])
+    );
+  }, []);
   const uniquePhrases = new Set(phrases);
   if (uniquePhrases.size !== phrases.length) {
     return false;
