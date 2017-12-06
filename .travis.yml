@@ -4,4 +4,9 @@ node_js:
 cache:
   yarn: true
 
+install:
+  - yarn
+  - yarn global add codecov
+
 script: yarn test -- --coverage
+after_script: codecov
