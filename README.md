@@ -4,6 +4,9 @@
   <a href="https://travis-ci.org/DSchau/advent-of-code">
     <img alt="Travis" src="https://travis-ci.org/DSchau/advent-of-code.svg?branch=master">
   </a>
+  <a href="https://codecov.io/gh/DSchau/advent-of-code">
+    <img alt="Codecov" src="https://codecov.io/gh/DSchau/advent-of-code/branch/master/graph/badge.svg">
+  </a>
   <a href="#badge">
     <img alt="code style: prettier" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg">
   </a>
