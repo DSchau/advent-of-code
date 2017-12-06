@@ -4,12 +4,26 @@ const fs = require('fs');
 const path = require('path');
 const axios = require('axios');
 
-const base = path.join(__dirname, '2017');
-const getUrl = day => `http://adventofcode.com/2017/day/${day}/input`;
+const getUrl = (day, year = 2017) => `http://adventofcode.com/${year}/day/${day}/input`;
 
-const folders = fs.readdirSync(base)
-  .filter(fileOrFolder => fs.statSync(path.join(base, fileOrFolder)).isDirectory())
-  .filter(folder => !fs.existsSync(path.join(base, folder, 'input.json')));
+const isFolder = (...joined) => fs.statSync(path.join(...joined)).isDirectory()
+
+const folders = fs.readdirSync(__dirname)
+  .filter(fileOrFolder => isFolder(fileOrFolder) && parseFloat(fileOrFolder))
+  .reduce((all, folder) => {
+    const base = path.join(__dirname, folder);
+    return all.concat(
+      fs.readdirSync(base)
+        .reduce((allNested, nested) => {
+          const folderPath = path.join(base, nested);
+          if (isFolder(folderPath)) {
+            allNested.push([parseFloat(folder), folderPath]);
+          }
+          return allNested;
+        }, [])
+    );
+  }, [])
+  .filter(([, folder]) => !fs.existsSync(path.join(folder, 'input.json')));
 
 const writeFile = (...args) => {
   return new Promise((resolve, reject) => {
@@ -25,8 +39,8 @@ const writeFile = (...args) => {
 (async () => {
   await Promise.all(
     folders
-      .map(async folder => {
-        const day = parseFloat(folder);
+      .map(async ([year, folder]) => {
+        const day = parseFloat(folder.split('/').pop());
         const input = await axios.get(getUrl(day), {
           headers: {
             ContentType: 'text/plain',
@@ -46,7 +60,7 @@ const writeFile = (...args) => {
             return { input: transformed.length === 1 ? transformed.pop() : transformed };
           });
 
-        const filePath = path.join(base, folder, 'input.json');
+        const filePath = path.join(folder, 'input.json');
         return await writeFile(filePath, JSON.stringify(input, null, 2), 'utf8');
       })
   )
