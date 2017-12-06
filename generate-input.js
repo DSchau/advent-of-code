@@ -35,9 +35,6 @@ const writeFile = (...args) => {
           transformResponse: [data => data]
         })
           .then(response => {
-            return response;
-          })
-          .then(response => {
             const data = response.data.trim();
             const transformed = data.split(/\s+/g).map(part => {
               const num = parseFloat(part);
