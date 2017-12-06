@@ -16,6 +16,7 @@
   "devDependencies": {
     "@types/jest": "~21.1.8",
     "@types/node": "~8.0.53",
+    "dotenv": "~4.0.0",
     "husky": "~0.15.0-beta.15",
     "jest": "~21.2.1",
     "jest-preset-typescript": "~1.0.1",
@@ -30,5 +31,8 @@
       "prettier --write --parser typescript",
       "git add"
     ]
+  },
+  "dependencies": {
+    "axios": "~0.17.1"
   }
 }
