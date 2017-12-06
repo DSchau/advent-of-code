@@ -19,11 +19,7 @@ export function passphraseValidator(
       [phrase].concat(withAnagramValidation ? getSortedWord(phrase) || [] : [])
     );
   }, []);
-  const uniquePhrases = new Set(phrases);
-  if (uniquePhrases.size !== phrases.length) {
-    return false;
-  }
-  return true;
+  return new Set(phrases).size === phrases.length;
 }
 
 export function getValidPassphrases(
