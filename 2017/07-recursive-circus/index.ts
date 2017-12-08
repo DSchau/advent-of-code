@@ -3,7 +3,9 @@ interface Tree {
   nodes: string[];
 }
 
-export function translateInputToTree(input: string): Map<String, Tree> {
+type TreeMap = Map<String, Tree>;
+
+export function translateInputToTree(input: string): TreeMap {
   return input.split("\n")
     .reduce((tree, value) => {
       let [, name, weight, , nodes = ''] = /(\w+)\s?\((\d+)\)(\s*->\s*(.+))?/.exec(value)
@@ -16,10 +18,6 @@ export function translateInputToTree(input: string): Map<String, Tree> {
 }
 
 const isRoot = (tree, current) => {
-  if (!tree.has(current)) {
-    return false;
-  }
-
   const entries = tree.entries();
 
   for (let [name, value] of entries) {
@@ -40,4 +38,32 @@ export function getBaseOfTree(input: string) {
     }
   }
   return null;
+}
+
+export function getNodeWeight(tree: TreeMap, node: string) {
+  const el = tree.get(node);
+  if (!el.nodes.length) {
+    return el.weight;
+  }
+  return el.nodes
+    .reduce((weight, nestedNode) => {
+      return weight + getNodeWeight(tree, nestedNode);
+    }, el.weight);
+}
+
+export function getNodeWeights(input: string) {
+  const tree = translateInputToTree(input);
+  const base = getBaseOfTree(input);
+  const nodes = tree.get(base).nodes;
+  return nodes
+    .reduce((weights, node) => {
+      const weight = getNodeWeight(tree, node);
+      if (weights.has(weight)) {
+        const existing = weights.get(weight);
+        weights.set(weight, existing.concat(node));
+      } else {
+        weights.set(weight, [node]);
+      }
+      return weights;
+    }, new Map());
 }
