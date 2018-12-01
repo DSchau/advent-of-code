@@ -23,4 +23,5 @@ Solutions to advent of code (starting in 2017), written in Typescript and unit t
 - [High Entropy Passphrases](./2017/04-high-entropy-passphrases/index.ts) | [Day 4](https://adventofcode.com/2017/day/4)
 - [A Maze Of Twisty Trampolines All Alike](./2017/05-a-maze-of-twisty-trampolines-all-alike/index.ts) | [Day 5](https://adventofcode.com/2017/day/5)
 - [Memory Reallocation](./2017/06-memory-reallocation/index.ts) | [Day 6](https://adventofcode.com/2017/day/6)
+- [Recursive Circus](./2017/07-recursive-circus/index.ts) | [Day 7](https://adventofcode.com/2017/day/7)
 <!-- AUTO-GENERATED-CONTENT:END (SOLUTIONS) -->
