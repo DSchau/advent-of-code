@@ -5,30 +5,27 @@
   "author": "Dustin Schau <dustinschau@gmail.com> (https://dustinschau.com)",
   "license": "MIT",
   "scripts": {
-    "build": "npm run build:2017",
-    "build:2017": "tsc --project 2017/tsconfig.build.json",
-    "markdown": "npm run markdown:2017 & npm run markdown:base",
-    "markdown:base": "md-magic --path README.md",
-    "markdown:2017": "md-magic --path 2017/README.md",
-    "test": "npm run test:2017 --",
-    "test:2017": "jest --config 2017/jest.config.js"
+    "markdown": "md-magic --path README.md **/*.md",
+    "test": "npm run test:2018",
+    "test:2017": "jest --config 2017/jest.config.js",
+    "test:2018": "jest --config 2018/jest.config.js"
   },
   "devDependencies": {
-    "@types/jest": "~21.1.8",
+    "@types/jest": "^23.3.10",
     "@types/node": "~8.0.53",
     "dotenv": "~4.0.0",
-    "husky": "~0.15.0-beta.15",
-    "jest": "~21.2.1",
-    "jest-preset-typescript": "~1.0.1",
-    "lint-staged": "~6.0.0",
+    "husky": "^1.2.0",
+    "jest": "^23.6.0",
+    "jest-preset-typescript": "^1.2.0",
+    "lint-staged": "^8.1.0",
     "markdown-magic": "~0.1.19",
-    "prettier": "~1.8.2",
-    "ts-jest": "~21.2.4",
-    "typescript": "~2.6.2"
+    "prettier": "^1.15.3",
+    "ts-jest": "^23.10.5",
+    "typescript": "^3.2.1"
   },
   "lint-staged": {
     "**/*.ts": [
-      "prettier --write --parser typescript",
+      "prettier --write",
       "git add"
     ]
   },
